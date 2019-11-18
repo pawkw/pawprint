@@ -1,24 +1,16 @@
-// var gulp = require('gulp');
-
-// gulp.task('default', defaultTask);
-
-// function defaultTask(done) {
-//     console.log("Hello world.");
-//     done();
-// }
-
-// gulp.task('hello', hello);
-
-// function hello(done) {
-//     console.log("Hello again.");
-//     done();
-// }
-
 import gulp from 'gulp';
+import yargs from 'yargs';
+import sass from 'gulp-sass';
+import cleanCSS from 'gulp-clean-css';
+import gulpif from 'gulp-if';
 
-export const hello = (done) => {
-    console.log("Hello again.");
-    done();
+const PRODUCTION = yargs.argv.prod;
+
+export const styles = (done) => {
+    return gulp.src('src/assets/scss/bundle.scss')
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulpif(PRODUCTION, cleanCSS({ compatibility: 'ie8' })))
+        .pipe(gulp.dest('dist/assets/css'));
 }
 
-export default hello;
+export default styles;
