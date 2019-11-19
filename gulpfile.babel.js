@@ -9,6 +9,7 @@ import del from 'del';
 import webpack from 'webpack-stream';
 import named from 'vinyl-named';
 import browserSync from 'browser-sync';
+import zip from 'gulp-zip';
 
 const server = browserSync.create();
 
@@ -30,6 +31,10 @@ const paths = {
     scripts: {
         src: ['src/assets/js/bundle.js', 'src/assets/js/admin.js'],
         dest: 'dist/assets/js'
+    },
+    package: {
+        src: ['**/*', '!.git{,/**}', '!.gitignore', '!node_modules{,/**}', '!package{,/**}', '!src{,/**}', '!.babelrc', '!gulpfile.babel.js', '!package-lock.json', '!package.json'],
+        dest: 'package'
     }
 }
 
@@ -105,7 +110,14 @@ export const reload = (done) => {
     done();
 }
 
+export const compress = () => {
+    return gulp.src(paths.package.src)
+        .pipe(zip('pawprint.zip'))
+        .pipe(gulp.dest(paths.package.dest));
+}
+
 export const dev = gulp.series(clean, gulp.parallel(styles, scripts, images, copy), serve, watch);
 export const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
+export const bundle = gulp.series(build, compress);
 
 export default dev;
