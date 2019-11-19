@@ -9,7 +9,9 @@ Place the `pawprint` folder in `wp-content/themes`.
 Open the folder in the terminal and run:
 ```
 npm install
-gulp --prod
+npm run build
 ```
 
-The --prod flag runs everything required for using the PawPrint theme.
+## Notes
+
+Javascript and SCSS are processed as bundles. SCSS files have to be imported in 'src/assets/scss/bundle.scss' and Javascript files immported in 'src/assets/js/bundle.js'.
