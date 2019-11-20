@@ -12,10 +12,10 @@ if(!function_exists('_themename_post_meta')) {
 
 if(!function_exists('_themename_continue_reading')) {
     function _themename_continue_reading() {
-        echo '<a href="'.esc_url(get_the_permalink()).'" title="'.the_title_attribute( ['echo' => false] ).'">';
+        echo '<a href="'.esc_url(get_the_permalink()).'" title="'.the_title_attribute( ['echo' => false] ).'" class="pawprint-continue-reading">';
         printf(
             /* translators: $s is the title of the post */
-            wp_kses( __( 'Continue reading <span class="u-screen-reader-text">%s</span></a>', '_themename'),
+            wp_kses( __( 'Continue reading <span class="sr-only sr-only-focusable">%s</span></a>', '_themename'),
             [ 
                 'span' => [ 'class' => [] ]
             ]

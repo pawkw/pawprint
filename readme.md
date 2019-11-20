@@ -36,6 +36,21 @@ This will make a new package zip file in the package folder.
 
 Javascript and SCSS are processed as bundles. SCSS files have to be imported in 'src/assets/scss/bundle.scss' and Javascript files immported in 'src/assets/js/bundle.js'.
 
+# CSS
+
+There are a number of CSS classes that can be overridden.
+
+- pawprint-body-class
+- pawprint-post-title
+- pawprint-post-meta : The author and date of the post.
+- pawprint-post-excerpt
+- pawprint-continue-reading : This is the link below the excerpt.
+- pawprint-sidebar
+- pawprint-sidebar-widget
+- pawprint-sidebar-widget-title
+
+## Adding Bootstrap classes to PawPrint classes
+
 # Hooks
 
 To customize PawPrint with your own code, a number of hooks are included. Here is an example which should be in the 'functions.php' file of your child theme. These hooks are in addition to the ones already provided by WordPress.
