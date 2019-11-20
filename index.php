@@ -8,17 +8,18 @@
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                 </h2>
                 <div>
-                    <?php pawprint_post_meta(); ?>
+                    <?php _themename_post_meta(); ?>
                 </div>
                 <div>
                     <?php the_excerpt(); ?>
                 </div>
                 <?php
-                pawprint_continue_reading();
+                _themename_continue_reading();
             } 
             the_posts_pagination();
+            do_action( '_themename_after_pagination' );
         } else { ?>
-            <p><?php _e('Sorry, no posts matched your criteria.', 'pawprint'); ?></p>
+            <p><?php echo apply_filters( '_themename_no_posts_text', esc_html__('Sorry, no posts matched your criteria.', '_themename') ); ?></p>
         <?php
         }
     ?>

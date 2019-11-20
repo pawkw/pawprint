@@ -24,6 +24,7 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.2.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-zip": "^5.0.1",
@@ -31,5 +32,10 @@
     "webpack-stream": "^5.2.1",
     "yargs": "^15.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.3.1",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
+  }
 }
