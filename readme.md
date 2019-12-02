@@ -40,6 +40,9 @@ Javascript and SCSS are processed as bundles. SCSS files have to be imported in 
 
 There are a number of CSS classes that can be overridden.
 
+- pawprint-header
+- pawprint-logo
+- pawprint-site-name : The name of your site or blog.
 - pawprint-body-class
 - pawprint-post-title
 - pawprint-post-meta : The author and date of the post.
