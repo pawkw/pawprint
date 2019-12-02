@@ -94,3 +94,9 @@ You'll see that the `esc_html__()` i18n function is used. If your website will n
 
 # Footers
 
+# Template parts
+
+## The loop
+
+The loop runs through the available posts for a specific category. To make your own loop, make a php file in your child theme named `loop-<page>.php`. For example, to replace the loop of the index page, you would make a file named `loop-index.php`.
+
