@@ -48,6 +48,11 @@ There are a number of CSS classes that can be overridden.
 - pawprint-sidebar
 - pawprint-sidebar-widget
 - pawprint-sidebar-widget-title
+- pawprint-footer
+- pawprint-footer-widget
+- pawprint-footer-widget-title
+- pawprint-site-info
+- pawprint-site-info-text
 
 ## Adding Bootstrap classes to PawPrint classes
 
@@ -86,4 +91,6 @@ You'll see that the `esc_html__()` i18n function is used. If your website will n
 ## Filter tags included
 
 - pawprint_no_posts_text : Appears when there are no posts to display.
-- 
+
+# Footers
+

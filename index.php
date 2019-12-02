@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container mb-4">
+<div class="container mt-4 mb-4">
     <div class="row">
         <div class="<?php echo is_active_sidebar( 'primary-sidebar' ) ? 'col-md-8' : 'col-md-12'; ?>">
             <main role="main">
