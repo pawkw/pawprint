@@ -56,6 +56,10 @@ There are a number of CSS classes that can be overridden.
 - pawprint-footer-widget-title
 - pawprint-site-info
 - pawprint-site-info-text
+- pawprint-search-form
+- pawprint-search-label
+- pawprint-search-field
+- pawprint-search-button
 
 ## Adding Bootstrap classes to PawPrint classes
 
