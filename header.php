@@ -11,6 +11,7 @@
 <?php
     $header_background = 'dark';
     $widget_theme = $header_background == 'dark' ? 'bg-dark text-white' : 'bg-light text-dark';
+    $navbar_theme = $header_background == 'dark' ? 'navbar-dark bg-dark text-white' : 'navbar-dark bg-light text-dark';
 ?>
 
 <header role="banner" class="mb-4">
@@ -26,7 +27,15 @@
             </div>
         </div>
     </div>
-
+    <div class="navbar navbar-expand-lg <?php echo $navbar_theme; ?>">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="pawprint-nav-header collapse navbar-collapse" id="navbarNav" role="navigation" aria-label="<?php esc_html_e('Main navigation', '_themename'); ?>">
+            <?php wp_nav_menu( array('theme_location' => 'main-menu') ); ?>
+        </div>
+    </div>
 </header>
 
 <div class="pawprint-content">
