@@ -20,5 +20,6 @@ if(!function_exists('_themename_continue_reading')) {
                 'span' => [ 'class' => [] ]
             ]
             ), get_the_title());
+        echo '</a>';
     }
 }

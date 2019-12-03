@@ -14,7 +14,7 @@
 ?>
 
 <header role="banner" class="mb-4">
-    <div class="pawprint-header <?php echo $widget_theme; ?> py-4">
+    <div class="pawprint-header <?php echo $widget_theme; ?> py-2">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="pawprint-logo col-md-4">
