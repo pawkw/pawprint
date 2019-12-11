@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class( 'pawprint-body-class' ) ?> >
-
+<a class="sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', '_themename' );?></a>
 <?php
     $header_background = 'dark';
     $widget_theme = $header_background == 'dark' ? 'bg-dark text-white' : 'bg-light text-dark';
@@ -37,4 +37,4 @@
     
 </header>
 
-<div class="pawprint-content">
+<div id="content" class="pawprint-content">
