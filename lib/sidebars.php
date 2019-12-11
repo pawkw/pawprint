@@ -5,9 +5,9 @@ function _themename_sidebar_widgets() {
         'id' => 'primary-sidebar',
         'name' => esc_html__('Primary sidebar', '_themename'),
         'description' => esc_html__('This is the main sidebar.', '_themename'),
-        'before_widget' => '<section id="%1$s" class="pawprint-sidebar-widget card p-2 mb-4 shadow %2$s">',
+        'before_widget' => '<section id="%1$s" class="pawprint-sidebar-widget p-2 mb-4 bg-light shadow %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<h5 class="pawprint-sidebar-widget-title p-2 border-bottom card-title">',
+        'before_title' => '<h5 class="pawprint-sidebar-widget-title p-2 border-bottom">',
         'after_title' => '</h5>'
     ) );
 

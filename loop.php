@@ -5,7 +5,7 @@
             the_post();
             get_template_part( 'template-parts/post/content' );
         } ?>
-        <div class="pawprint-pagination col-md-7 mx-auto">
+        <div class="pawprint-pagination d-flex flex-row-reverse">
             <?php the_posts_pagination( array(
                 'mid_size' => 1,
                 'prev_text' => esc_html__( 'Prev.', '_themename' ),
