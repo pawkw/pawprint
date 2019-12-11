@@ -4,7 +4,7 @@
 @import './settings/typography';
 
 @import './tools/units';
-// @import './tools/breakpoint';
+@import './tools/breakpoint';
 
 // @import './generic/normalize';
 // @import './generic/box-sizing';
@@ -21,27 +21,28 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 
 @import '../../../node_modules/slick-carousel/slick/slick.scss';
 
-// @import './objects/wp';
-// @import './objects/grid';
+@import './objects/wp';
+@import './objects/grid';
 
-// @import './components/post';
-// @import './components/page';
-// @import './components/widget';
-// @import './components/footer';
-// @import './components/header';
-// @import './components/comment';
-// @import './components/search-form';
-// @import './components/nav-links';
+@import './components/post';
+@import './components/page';
+@import './components/widget';
+@import './components/footer';
+@import './components/header';
+@import './components/comment';
+@import './components/search-form';
+@import './components/nav-links';
 
-// @import './utils/helpers';
-// @import './utils/flex';
-// @import './utils/margins';
+@import './utils/helpers';
+@import './utils/flex';
+@import './utils/margins';
 
 @import '../../../node_modules/normalize.css/normalize';
 @import './wordpress.scss';
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 @import './navbar.scss';
 
-article.sticky {
-    border-left: 5px solid #000;
+.pawprint-sidebar-widget ul {
+    padding-left: 1em;
+    list-style: none;
 }
