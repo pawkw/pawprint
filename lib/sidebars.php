@@ -13,7 +13,7 @@ function _themename_sidebar_widgets() {
 
     $footer_layout = '3,3,3,3';
     $columns = explode(',', $footer_layout);
-    $footer_background = 'dark';
+    $footer_background = _themename_sanitize_footer_bg(get_theme_mod( '_themename_footer_bg', 'dark' ));
     $widget_theme = $footer_background == 'dark' ? 'bg-dark text-white' : 'bg-light text-dark';
 
     foreach($columns as $i => $column) {
