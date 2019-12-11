@@ -99,6 +99,12 @@ You'll see that the `esc_html__()` i18n function is used. If your website will n
 
 - pawprint_no_posts_text : Appears when there are no posts to display.
 
+# Menus
+
+## Mega menus
+
+To add a mega menu, go to 'Appearance -> Menus' and click on 'Screen Options' at the top. Select 'CSS Classes'. Add the class `mega` and `cols-#`, where # is the number of columns. Any sub-menu you add will now be a column, and sub-sub-menus will be items in that column.
+
 # Footers
 
 # Template parts
