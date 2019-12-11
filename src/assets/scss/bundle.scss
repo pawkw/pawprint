@@ -6,13 +6,13 @@
 @import './tools/units';
 @import './tools/breakpoint';
 
-// @import './generic/normalize';
-// @import './generic/box-sizing';
+@import './generic/normalize';
+@import './generic/box-sizing';
 
-// @import './elements/general';
-// @import './elements/typography';
-// @import './elements/form';
-// @import './elements/print';
+@import './elements/general';
+@import './elements/typography';
+@import './elements/form';
+@import './elements/print';
 
 $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';

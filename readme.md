@@ -36,6 +36,10 @@ This will make a new package zip file in the package folder.
 
 Javascript and SCSS are processed as bundles. SCSS files have to be imported in 'src/assets/scss/bundle.scss' and Javascript files immported in 'src/assets/js/bundle.js'.
 
+# Adding scripts
+
+If you need to add a script to your site, 
+
 # CSS
 
 There are a number of CSS classes that can be overridden.

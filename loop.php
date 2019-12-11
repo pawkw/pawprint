@@ -5,11 +5,11 @@
             the_post();
             get_template_part( 'template-parts/post/content' );
         } ?>
-        <div class="pawprint-pagination col-md-4 mx-auto">
+        <div class="pawprint-pagination col-md-7 mx-auto">
             <?php the_posts_pagination( array(
                 'mid_size' => 1,
-                'prev_text' => esc_html__( 'Prev.', 'pawprint' ),
-                'next_text' => esc_html__( 'Next', 'pawprint' )
+                'prev_text' => esc_html__( 'Prev.', '_themename' ),
+                'next_text' => esc_html__( 'Next', '_themename' )
             ) ); ?>
         </div>
         <?php
