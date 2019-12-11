@@ -10,6 +10,7 @@ function _themename_theme_support() {
         'gallery',
         'caption'
     ) );
+    add_theme_support( 'customize-selective-refresh-widgets' );
 }
 
 add_action( 'after_setup_theme', '_themename_theme_support' );

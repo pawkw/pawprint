@@ -9,7 +9,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mt-2 mb-4 pawprint-site-info-text text-center <?php echo $widget_theme; ?>">
-                    <?php echo esc_html( $site_info ); ?>
+                    <?php
+                    $allowed = array( 'a' => array(
+                        'href' => array(),
+                        'title' => array()
+                    ));
+                    echo wp_kses( $site_info, $allowed ); ?>
                 </div>
             </div>
         </div>
