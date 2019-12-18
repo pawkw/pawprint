@@ -13,6 +13,34 @@ function _themename_customize_register( $wp_customize ) {
         }
     ));
 
+    /* ========== General settings ========== */
+
+    $wp_customize->add_section('_themename_general_options', array(
+        'title' => esc_html__( 'General Options', '_themename' ),
+        'description' => esc_html__( 'Change the general options.', '_themename' ),
+        'priority' => '30'
+    ));
+
+    $wp_customize->add_setting('_themename_accent_color', array(
+        'default' => '#20ddae',
+        'sanitize_callback' => 'sanitize_hex_color',
+        // 'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control( 
+        new WP_Customize_Color_Control( 
+        $wp_customize, 
+        '_themename_accent_color', 
+        array(
+            'label'      => __( 'Accent Color', '_themename' ),
+            'section'    => '_themename_general_options',
+            'settings'   => '_themename_accent_color',
+        ) ) 
+    );
+
+
+    /* ========== Footer settings ========== */
+
     $wp_customize->selective_refresh->add_partial('_themename-footer-partial', array(
         'settings' => array('_themename_footer_bg', '_themename_footer_layout'),
         'selector' => '#footer',
