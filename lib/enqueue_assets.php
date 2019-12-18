@@ -16,6 +16,11 @@ function _themename_admin_assets() {
 
 function _themename_customize_preview_js() {
     wp_enqueue_script( '_themename-customize-preview', get_template_directory_uri().'/dist/assets/js/customize-preview.js', array('jquery', 'customize-preview'), '1.0.0', true );
+
+    include( get_template_directory( ) . '/lib/inline_css.php');
+    wp_localize_script( '_themename-customize-preview', '_themename', array(
+        'inline-css' => $inline_selectors
+    ) );
 }
 
 add_action( 'wp_enqueue_scripts', '_themename_assets' );
