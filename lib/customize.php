@@ -14,7 +14,7 @@ function _themename_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->selective_refresh->add_partial('_themename-footer-partial', array(
-        'settings' => array('_themename_footer_bg'),
+        'settings' => array('_themename_footer_bg', '_themename_footer_layout'),
         'selector' => '#footer',
         'container_inclusive' => false,
         'render_callback' => function() {
@@ -43,6 +43,20 @@ function _themename_customize_register( $wp_customize ) {
             'light' => esc_html__( 'Light', '_themename' )
         ),
         'section' => '_themename_footer_options'
+    ));
+
+    $wp_customize->add_setting('_themename_footer_layout', array(
+        'default' => '3,3,3,3',
+        'sanitize_callback' => 'sanitize_text_field',
+        'validate_callback' => '_themename_validate_footer_layout',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control('_themename_footer_layout', array(
+        'type' => 'text',
+        'label' => esc_html__( 'Footer Layout', '_themename' ),
+        'section' => '_themename_footer_options',
+        'description' => 'List the width of each column (out of 12) seperated by commas. Ex. Three columns with a wide middle would be 3,6,3.'
     ));
 
     $wp_customize->add_setting('_themename_site_info', array(
@@ -74,4 +88,11 @@ function _themename_sanitize_footer_bg( $input ) {
         return $input;
     }
     return 'dark';
+}
+
+function _themename_validate_footer_layout( $validity, $input ) {
+    if(!preg_match('/^([1-9]|1[012])(,([1-9]|1[012]))*$/', $input)) {
+        $validity->add('invalid_footer_layout', esc_html__( 'Invalid layout.', '_themename' ));
+    }
+    return $validity;
 }
