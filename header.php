@@ -17,9 +17,13 @@
 <header role="banner" class="mb-4">
     <div class="pawprint-header <?php echo $widget_theme; ?> py-2">
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between align-items-center">
                 <div class="pawprint-logo col-md-4">
+                <?php if(has_custom_logo( )) {
+                    the_custom_logo( );
+                } else { ?>
                     <a class="pawprint-site-name" href="<?php echo esc_url(home_url( '/' )); ?>"><?php bloginfo( 'name' ); ?></a>
+                <?php } ?>
                 </div>
                 <div class="col-md-4">
                     <?php get_search_form( true ); ?>
