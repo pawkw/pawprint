@@ -9,4 +9,5 @@
         <?php the_excerpt(); ?>
     </div>
     <?php _themename_continue_reading(); ?>
+    <?php echo _themename_delete_post(); ?>
 </article>
