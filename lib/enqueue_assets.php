@@ -2,6 +2,8 @@
 
 function _themename_assets() {
     wp_enqueue_style( '_themename-stylesheet', get_template_directory_uri().'/dist/assets/css/bundle.css' , array(), '1.0.0', 'all' );
+
+    wp_enqueue_style( '_themename-bootstrap', get_template_directory_uri().'/dist/assets/css/bootstrap.css' , array(), '4.3.1', 'all' );
     
     include( get_template_directory( ) . '/lib/inline_css.php');
     wp_add_inline_style( '_themename-stylesheet',  $inline_styles);
