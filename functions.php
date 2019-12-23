@@ -6,6 +6,7 @@ require_once('lib/enqueue_assets.php');
 require_once('lib/sidebars.php');
 require_once('lib/theme_support.php');
 require_once('lib/navigation.php');
+require_once('lib/metaboxes.php');
 
 function _themename_handle_delete_post() {
     if( isset($_GET['action']) && $_GET['action'] === '_themename_delete_post') {
